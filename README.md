@@ -44,6 +44,34 @@ pip install ping3
 ```
 Make sure you have Python and pip installed before running these commands. These dependencies are required for the proper functionality of iimserver and enable database connectivity and network monitoring features.
 
+## API Documentation
+
+Below is a brief description of the functionality of each endpoint in the iimserver monitoring server API:
+
+- **GET /status**: Retrieves the current status of the monitoring server.
+
+- **GET /config/dump**: Returns the complete configuration of the monitoring server, including all settings and configured options (a dump of `config.ini`).
+
+- **GET /nodes/get**: Retrieves the list of all registered network nodes in the monitoring server, providing all details of each node.
+
+- **GET /nodes/get/{n}**: Retrieves specific details of the node with the identifier `{n}`. It provides detailed information about a particular node, such as its status, IP address, ports, etc.
+
+- **GET /nodes/getfailed**: Returns the list of nodes that have failed or encountered any issues during the last monitoring process.
+
+- **GET /nodes/getpublic**: Retrieves the list of public nodes registered in the monitoring server. These nodes are available for querying in the public frontend of iimclient.
+
+- **POST /nodes/add**: Allows adding a new node to the monitoring server.
+
+- **POST /nodes/edit/{n}**: Enables editing the information of an existing node identified by `{n}`. Changes can be made to the node's parameters.
+
+- **POST /nodes/delete/{n}**: Deletes a specific node identified by `{n}` from the monitoring server. This action involves completely removing the node and its associated records.
+
+- **GET /log/get**: Retrieves the log of node status changes for all nodes.
+
+- **GET /log/node/{n}**: Retrieves the specific status log of the node identified by `{n}`. It provides detailed information about the particular node.
+
+- **GET /plugins/get**: Retrieves a list of all installed plugins on the server.
+
 ## Contributing
 
 Feel free to contribute.
