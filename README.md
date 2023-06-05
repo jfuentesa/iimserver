@@ -26,14 +26,14 @@ iimserver is a network monitoring solution designed to provide comprehensive mon
 1. Clone the iimserver repository.
 2. Install the required dependencies using `pip`.
 3. Configure the server's network settings and ensure accessibility.
-4. Set up the database and establish the necessary connections.
+4. Set up the configuration (database, monitoring features, server token...).
 5. Start the server.
 
-## Dependencies
+## Install
 
 ### 1. Database
 
-Create the database and import the file `src/iimserver.sql` to set up the necessary tables. Configure the database in the `config.ini`.
+Create the database and import the file `src/iimserver.sql` to set up the necessary tables.
 
 ### 2. Python Dependencies
 
@@ -43,6 +43,14 @@ pip install mysql-connector-python
 pip install ping3
 ```
 Make sure you have Python and pip installed before running these commands. These dependencies are required for the proper functionality of iimserver and enable database connectivity and network monitoring features.
+
+### 3. Configuration
+
+- Make the appropiate changes into your `config.ini` file to establish a connection to the database.
+
+- Specify a server token: Clients interacting with the API should be aware of this requirement and ensure that they include the appropriate "Auth" header with the correct server token when making API requests. Failure to include the required authentication header may result in the request being rejected or denied access to the requested resources.
+
+- Configure the plugins parameters.
 
 ## API Documentation
 
@@ -71,6 +79,10 @@ Below is a brief description of the functionality of each endpoint in the iimser
 - **GET /log/node/{n}**: Retrieves the specific status log of the node identified by `{n}`. It provides detailed information about the particular node.
 
 - **GET /plugins/get**: Retrieves a list of all installed plugins on the server.
+
+### API Authentication
+
+Include an "Auth" header with the server token in each request, the server can verify the authenticity and authorization of the client making the request. This helps to secure the API and protect it from unauthorized access or malicious activities. The server token acts as a form of authentication to ensure that only authorized clients can access the API endpoints.
 
 ## Contributing
 
