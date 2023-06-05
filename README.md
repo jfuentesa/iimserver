@@ -29,8 +29,6 @@ iimserver is a network monitoring solution designed to provide comprehensive mon
 4. Set up the database and establish the necessary connections.
 5. Start the server.
 
-For detailed installation and configuration instructions, please refer to the [Documentation](docs/README.md).
-
 ## Dependencies
 
 ### 1. Database
