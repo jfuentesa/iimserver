@@ -6,17 +6,15 @@ iimserver is a network monitoring solution designed to provide comprehensive mon
 
 - **Network Accessibility**: The server is accessible through the organization's network using a valid IP address specific to the network it operates in.
 
-- **Node Monitoring Configuration**: The server is configured to monitor network nodes, including the installation and setup of required plugins for monitoring different services and resources on the nodes.
-
 - **Alert Detection and Notification**: The server is capable of detecting and properly notifying alerts and issues detected on network nodes. It ensures timely notification of any problems or anomalies.
 
 - **Monitoring Log**: A comprehensive monitoring log is maintained by the server, recording all relevant information related to node monitoring, including alerts, issues, and node statuses.
 
-- **Database Integration**: The server is properly configured and connected to a functioning database, ensuring seamless integration with the web platform.
+- **API Nodes Management**: The server provides API functionalities to manage and maintain the list of network nodes, allowing easy addition, editing, and removal of nodes.
 
-- **Node Management**: The server provides functionalities to manage and maintain the list of network nodes, allowing easy addition, editing, and removal of nodes.
+- **Plugin Support**: Supported plugins enables effective monitoring of various services and resources on network nodes.
 
-- **Plugin Support**: Supported plugins are stored and configured correctly, enabling effective monitoring of various services and resources on network nodes.
+- **Node Features**: The nodes includes two features: 'Public' and 'Disabled'. The 'Public' feature allows you to designate specific nodes as public, making them visible in a convenient public list. This is useful when you want to share certain node information with others. On the other hand, the 'Disabled' feature allows you to activate or deactivate nodes, preventing their monitoring. This can be beneficial when you want to temporarily exclude certain nodes from monitoring or when performing maintenance tasks.
 
 ## Requirements
 
