@@ -35,7 +35,7 @@ For detailed installation and configuration instructions, please refer to the [D
 
 ### 1. Database
 
-- Create the database and import the file `src/iimserver.sql` to set up the necessary tables.
+Create the database and import the file `src/iimserver.sql` to set up the necessary tables. Configure the database in the `config.ini`.
 
 ### 2. Python Dependencies
 
